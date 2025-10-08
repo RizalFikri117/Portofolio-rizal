@@ -302,10 +302,13 @@ nav a.active {
 /* Untuk layar lebih kecil lagi */
 @media (max-width: 480px) {
   .card {
-    width: 90%; /* satu card per baris */
+    width: 30%; /* satu card per baris */
   }
   .card img {
-    height: 100px;
+    height: 80px;
+  }
+  .card p {
+    font-size: 6px;
   }
 }
 
