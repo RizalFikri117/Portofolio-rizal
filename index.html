@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio | Rizal Fikri Mulyana</title>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> -->
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -28,20 +32,20 @@
 
     <main>
       <section id="home" class="page">
-        <div class="content">
+        <div class="content" data-aos="fade-right">
           <h1>Halo, Saya <span>Rizal Fikri Mulyana</span></h1>
           <p>Seorang <strong>Web Developer & Data Analyst</strong> yang berfokus pada pengembangan website dan analisis data untuk mendukung pengambilan keputusan berbasis informasi yang akurat dan efisien.</p>
-          <a href="#projects" class="btn">Lihat Project</a>
+          <a href="#projects" class="btn" data-aos="zoom-in">Lihat Project</a>
         </div>
-        <div class="image">
+        <div class="image" data-aos="fade-left">
           <img src="assets/images/profil.JPG" alt="Profile Photo" />
         </div>
       </section>
 
       <section id="about" class="page">
         <div class="content">
-          <h2>Tentang Saya</h2>
-          <p>
+          <h2 data-aos="zoom-in">Tentang Saya</h2>
+          <p data-aos="fade-up">
             Saya adalah lulusan Universitas Bina Sarana Informatika Program Studi Sistem Informasi yang memiliki minat besar dalam pengembangan website dan analis data. Saya menikmati proses menggabungkan kreativitas, logika, dan teknologi
             untuk menciptakan solusi digital yang inovatif dan bermanfaat bagi pengguna. Selain itu, saya selalu bersemangat untuk mempelajari teknologi baru, memperdalam kemampuan coding, serta mengasah keahlian dalam UI/UX, database,
             visualisasi data, dan framework modern agar dapat berkontribusi lebih dalam dunia pengembangan teknologi di masa depan.
@@ -51,15 +55,15 @@
 
       <section id="projects" class="page">
         <div class="content">
-          <h2 style="color: #0b57d0; text-align: center">Project & Sertifikat</h2>
+          <h2 data-aos="fade-down" style="color: #0b57d0; text-align: center">Project & Sertifikat</h2>
 
           <div class="tab-container">
-            <div class="tab active" id="tab-projects" onclick="showContent('projects')">Project</div>
-            <div class="tab" id="tab-certificates" onclick="showContent('certificates')">Sertifikat</div>
+            <div data-aos="fade-right" class="tab active" id="tab-projects" onclick="showContent('projects')">Project</div>
+            <div data-aos="fade-left" class="tab" id="tab-certificates" onclick="showContent('certificates')">Sertifikat</div>
           </div>
 
           <!-- PROJECT CONTENT -->
-          <div id="content-projects" class="cards">
+          <div id="content-projects" class="cards" data-aos="zoom-in">
             <div class="card">
               <a href="assets/images/itproblem.jpg" target="_blank">
                 <img src="assets/images/itproblem.jpg" alt="Ticketing IT Helpdesk" />
@@ -124,6 +128,13 @@
                 <img src="assets/images/sertifikat/bnsp.jpg" alt="Sertifikat BNSP" />
               </a>
               <p><strong>Sertifikat BNSP</strong><br />Pengakuan kompetensi bidang IT dari lembaga sertifikasi profesi resmi.</p>
+            </div>
+
+            <div class="card">
+              <a href="assets/images/sertifikat/toefl.png" target="_blank">
+                <img src="assets/images/sertifikat/toefl.png" alt="Sertifikat Toefl" />
+              </a>
+              <p><strong>Sertifikat Toefl</strong><br />Pengakuan dari lembaga bahasa Universitas Bina Sarana Informatika telah menyelesaikan Toefl Prediction Test.</p>
             </div>
 
             <div class="card">
@@ -208,10 +219,10 @@
       <!-- SKILL SECTION -->
       <section id="Skill" class="page">
         <div class="skills-container">
-          <h2>Tools & Teknologi</h2>
-          <p class="subtitle">My Professional Skills</p>
+          <h2 data-aos="fade-down">Tools & Teknologi</h2>
+          <p data-aos="fade-up" class="subtitle">My Professional Skills</p>
 
-          <div id="skillsGrid" class="skills-grid">
+          <div id="skillsGrid" class="skills-grid" data-aos="zoom-in">
             <!-- Baris 1 -->
             <div class="skill-card">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
@@ -400,5 +411,13 @@
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: false, // <--- biar animasi jalan lagi setiap kali muncul
+        mirror: true, // animasi juga muncul saat scroll ke atas
+      });
+    </script>
   </body>
 </html>
